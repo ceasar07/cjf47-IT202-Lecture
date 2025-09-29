@@ -1,7 +1,7 @@
 POST http://localhost:3000/addcategory.test.php
 Content-Type: application/x-www-form-urlencoded
 
-categoryID=300
+categoryID=400
 &categoryCode=Guitar
 &categoryName=Guitars
 ###
