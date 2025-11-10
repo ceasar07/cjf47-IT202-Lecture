@@ -1,4 +1,27 @@
-body {
+a, a:link {
+   color: #ca7834;
+  }
+  
+  a:active {
+   color: #7c6255;
+  }
+  
+  nav a, nav a:link {
+   color: #fbd79c;
+   text-decoration: none;
+  }
+  
+  nav a:visited {
+   color: #c59ad1;
+  }
+  
+  nav a:hover {
+   color: #b8999a;
+  }
+  
+  nav a:active {
+   color: #7c6255;
+  }body {
    font-family: Geneva, Tahoma, sans-serif;
    font-size: 80%;
    background-color: #ffffff;
