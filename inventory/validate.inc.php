@@ -1,7 +1,8 @@
 <?php
  error_log("\$_POST " . print_r($_POST, true));
  require_once('database.php');
- $emailAddress = $_POST['emailAddress'];
+ $emailAddress = htmlspecialchars($_POST['emailAddress']);
+ if (filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
  $password = $_POST['password'];
  $query = "SELECT firstName, lastName FROM admins " .
         "WHERE emailAddress = ? AND password = SHA2(?,256)";
@@ -19,5 +20,9 @@
  } else {
    echo "<h2>Sorry, login incorrect</h2>\n";
    echo "<a href=\"index.php\">Please try again</a>\n";
+ }
+ } else {
+  echo "<h2>Please enter valid email address</h2>\n";
+  echo '<a href=\"index.php\">Please try again</a>\n';
  }
 ?>

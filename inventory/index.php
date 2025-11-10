@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once("config.php");
 require_once("category.php");
 require_once("item.php");
 ?>
@@ -7,12 +8,14 @@ require_once("item.php");
 <html>
 <head>
    <title>Inventory Helper</title>
+   <link rel="stylesheet" type="text/css" href="ih_styles.css"> 
+   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
    <header>
        <?php include("header.inc.php"); ?>
    </header>
-   <section style="height: 425px;">
+   <section style="height: 375px;">
        <nav>
            <?php include("nav.inc.php"); ?>
        </nav>
