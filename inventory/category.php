@@ -17,6 +17,18 @@ class Category
            "<h2>$this->categoryCode, $this->categoryName</h2>\n";
        return $output;
    }
+   static function getTotalCategories()
+{
+    $db = getDB();
+    $query = "SELECT COUNT(categoryID) FROM categories";
+    $result = $db->query($query);
+    $row = $result->fetch_array();
+    if ($row) {
+        return $row[0];
+    } else {
+        return NULL;
+    }
+}
    function saveCategory()
    {
        $db = getDB();
